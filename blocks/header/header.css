@@ -1,6 +1,6 @@
 header {
-  --logo-width: 40px;
-  --logo-height: 40px;
+  --logo-width: 150px;
+  --logo-height: 32px;
   --mega-columns: 4;
 
   display: block;
@@ -11,7 +11,7 @@ header {
   z-index: 1000;
   overflow: hidden;
   max-height: var(--header-height);
-  background-color: light-dark(var(--color-light), var(--color-dark));
+  background-color: var(--color-scholastic-red);
 
   ul {
     margin: 0;
@@ -26,6 +26,7 @@ header {
 
   a {
     text-decoration: none;
+    color: var(--color-scholastic-white);
   }
 
   .btn {
@@ -136,10 +137,11 @@ header {
         font-weight: 700;
         text-decoration: none;
         margin: 0;
-        color: var(--color-brand);
+        color: var(--color-scholastic-white);
 
         img {
           height: var(--logo-height);
+          width: auto;
         }
 
         svg {
@@ -174,7 +176,7 @@ header {
     }
 
     > .block-content {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid rgb(255 255 255 / 20%);
     }
 
     .action-wrapper {
@@ -201,7 +203,7 @@ header {
     }
 
     .main-nav-item {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid rgb(255 255 255 / 20%);
 
       > * {
         max-width: var(--grid-container-width);
@@ -212,6 +214,29 @@ header {
     .main-nav-link {
       display: block;
       line-height: 64px;
+      color: var(--color-scholastic-white);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* Shop link: add dropdown chevron and separate from other links */
+    .main-nav-item:first-child {
+      margin-right: auto;
+    }
+
+    .main-nav-item:first-child .main-nav-link::after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid var(--color-scholastic-white);
+      margin-left: 6px;
+      vertical-align: middle;
     }
 
     .menu,
@@ -221,7 +246,7 @@ header {
 
     .is-open {
       .main-nav-link {
-        border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+        border-bottom: 1px solid rgb(255 255 255 / 20%);
       }
 
       .menu,
@@ -231,18 +256,27 @@ header {
     }
   }
 
+  .action-wrapper button {
+    color: var(--color-scholastic-white);
+
+    .icon {
+      filter: brightness(0) invert(1);
+    }
+  }
+
   &.is-mobile-open {
     height: initial;
     max-height: initial;
     overflow: initial;
     bottom: 0;
+    background-color: var(--color-scholastic-red);
 
     .header-content {
       height: 100%;
     }
 
     .brand-section {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid rgb(255 255 255 / 20%);
     }
   }
 }

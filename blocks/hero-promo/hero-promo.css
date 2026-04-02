@@ -1,0 +1,115 @@
+/* Hero Promo Block
+ * Promotional banner with foreground image, heading, and CTA button
+ * Used for Teacher promo & Scholastic TV banners
+ */
+
+/* Container: full-width */
+.hero-promo-container .hero-promo-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 24px;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+/* Image row: foreground product image, centered */
+.hero-promo > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.hero-promo > div:first-child picture {
+  display: block;
+}
+
+.hero-promo > div:first-child img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+/* Content row */
+.hero-promo > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Heading */
+.hero-promo h2 {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.14;
+  color: rgb(0 0 0);
+  margin: 0 0 16px;
+  letter-spacing: normal;
+}
+
+/* CTA button - red fill, white text, rounded */
+.hero-promo p {
+  margin: 0;
+}
+
+.hero-promo p a {
+  display: inline-block;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+  color: var(--color-scholastic-white);
+  background-color: var(--color-scholastic-red);
+  border: 2px solid var(--color-scholastic-red);
+  border-radius: 20px;
+  padding: 12.5px 30px;
+  text-decoration: none;
+  transition: var(--button-transition);
+  line-height: 1;
+}
+
+.hero-promo p a:hover {
+  background-color: var(--color-scholastic-red-dark);
+  border-color: var(--color-scholastic-red-dark);
+  color: var(--color-scholastic-white);
+}
+
+/* ClassroomsCount variant: yellow grid background */
+.hero-promo:has(#teachers-raise-funds-and-unlock-exclusive-offers) {
+  background-image: url("https://www.scholastic.com/content/corp-home/home/jcr:content/root/responsivegrid/responsivegrid/responsivegrid_copy_/file");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Responsive: desktop */
+@media (width >= 900px) {
+  .hero-promo {
+    padding: 48px 32px;
+    min-height: 400px;
+  }
+
+  .hero-promo > div:first-child {
+    max-width: 700px;
+  }
+
+  .hero-promo > div:first-child img {
+    max-height: 400px;
+  }
+
+  .hero-promo h2 {
+    font-size: 28px;
+  }
+}

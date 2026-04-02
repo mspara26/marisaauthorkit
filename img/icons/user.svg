@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <circle cx="128" cy="128" r="116" fill="none" stroke="currentColor" stroke-width="12"/>
+  <circle cx="128" cy="100" r="40" fill="currentColor"/>
+  <path fill="currentColor" d="M128,156c-52,0-84,28-84,56v4c22,20,52,32,84,32s62-12,84-32v-4c0-28-32-56-84-56Z"/>
+</svg>

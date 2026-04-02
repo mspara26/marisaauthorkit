@@ -1,0 +1,141 @@
+/* Cards Promo Block
+ * 3-column promotional card grid with rubric, heading, description, CTA
+ * Used in "Don't Miss Out" section on Scholastic home
+ */
+
+.cards-promo > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Individual card */
+.cards-promo > ul > li {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-scholastic-white);
+  overflow: hidden;
+  border-radius: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards-promo > ul > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+}
+
+/* Card image */
+.cards-promo .cards-promo-card-image {
+  line-height: 0;
+  order: 2;
+}
+
+.cards-promo > ul > li img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Card body */
+.cards-promo .cards-promo-card-body {
+  padding: 24px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+/* Rubric - first paragraph acts as rubric label */
+.cards-promo .cards-promo-card-body > p:first-child {
+  font-size: var(--rubric-font-size);
+  font-weight: var(--rubric-font-weight);
+  letter-spacing: var(--rubric-letter-spacing);
+  text-transform: var(--rubric-text-transform);
+  line-height: var(--rubric-line-height);
+  color: var(--rubric-color);
+  margin: 0 0 8px;
+}
+
+/* Card heading */
+.cards-promo .cards-promo-card-body h3 {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--color-scholastic-dark);
+  margin: 0 0 8px;
+  letter-spacing: normal;
+}
+
+/* Card description */
+.cards-promo .cards-promo-card-body > p:nth-child(3) {
+  font-size: var(--body-font-size-s);
+  font-weight: var(--body-font-weight);
+  line-height: 1.4;
+  color: var(--color-scholastic-dark);
+  margin: 0 0 12px;
+}
+
+/* CTA link - red uppercase with underline */
+.cards-promo .cards-promo-card-body > p:last-child {
+  margin: 0;
+}
+
+.cards-promo .cards-promo-card-body > p:last-child a {
+  font-size: var(--cta-font-size);
+  font-weight: var(--cta-font-weight);
+  letter-spacing: var(--cta-letter-spacing);
+  text-transform: var(--cta-text-transform);
+  color: var(--cta-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--cta-color);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cards-promo .cards-promo-card-body > p:last-child a:hover {
+  color: var(--color-scholastic-red-dark);
+  border-color: var(--color-scholastic-red-dark);
+}
+
+/* Dark section variant - cards in dark background section */
+.dark .cards-promo > ul > li {
+  background-color: var(--color-scholastic-white);
+}
+
+.dark .cards-promo .cards-promo-card-body h3 {
+  color: var(--color-scholastic-dark);
+}
+
+.dark .cards-promo .cards-promo-card-body > p {
+  color: var(--color-scholastic-dark);
+}
+
+.dark .cards-promo .cards-promo-card-body > p:first-child {
+  color: var(--rubric-color);
+}
+
+.dark .cards-promo .cards-promo-card-body > p:last-child a {
+  color: var(--cta-color);
+  border-color: var(--cta-color);
+}
+
+/* Responsive: tablet and up */
+@media (width >= 600px) {
+  .cards-promo > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: desktop */
+@media (width >= 900px) {
+  .cards-promo > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-promo .cards-promo-card-body {
+    padding: 24px 28px 16px;
+  }
+}

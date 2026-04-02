@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-promo",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-03-24T19:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.scholastic.com/home",
+    "originPage": "Scholastic homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "promotional-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + rubric + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional card grids",
+      "merchandising card layouts",
+      "featured product or category cards"
+    ],
+    "notSuitableFor": [
+      "simple text-only cards",
+      "icon-based feature cards",
+      "minimal card layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-24T19:48:00.000Z"
+  }
+}
