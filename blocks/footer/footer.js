@@ -12,8 +12,11 @@ const LEGAL_LINKS = [
 
 const COPYRIGHT = 'TM \u00AE & \u00A9 2026 Scholastic Inc. All Rights Reserved.';
 
-function parseFooterContent() {
-  const footerHeading = document.querySelector('main h2#footer');
+function parseFooterContent(blockEl) {
+  // Try global DOM first (local preview), then inside the block element (AK preview)
+  const footerHeading = document.querySelector('main h2#footer')
+    || blockEl?.querySelector('h2#footer')
+    || blockEl?.querySelector('h2');
   if (!footerHeading) return null;
 
   const wrapper = footerHeading.parentElement;
@@ -151,7 +154,7 @@ function buildFooter(data) {
 
 export default async function init(el) {
   getConfig();
-  const data = parseFooterContent();
+  const data = parseFooterContent(el);
   if (!data) return;
   const footer = buildFooter(data);
   el.append(footer);
