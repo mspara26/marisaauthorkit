@@ -2,7 +2,11 @@ import { getConfig, getMetadata } from '../../scripts/ak.js';
 import { loadFragment } from '../fragment/fragment.js';
 import { setColorScheme } from '../section-metadata/section-metadata.js';
 
-const { locale } = getConfig();
+let locale = { prefix: '' };
+try {
+  const config = getConfig();
+  if (config?.locale) locale = config.locale;
+} catch { /* getConfig may not be ready */ }
 
 const HEADER_PATH = '/fragments/nav/header';
 const HEADER_ACTIONS = [
@@ -192,11 +196,15 @@ async function decorateHeader(fragment) {
  * @param {Element} el The header element
  */
 export default async function init(el) {
-  const headerMeta = getMetadata('header');
-  const path = headerMeta || HEADER_PATH;
-  const fragment = await loadFragment(`${locale.prefix}${path}`);
-  if (!fragment) return;
-  fragment.classList.add('header-content');
-  await decorateHeader(fragment);
-  el.append(fragment);
+  try {
+    const headerMeta = getMetadata('header');
+    const path = headerMeta || HEADER_PATH;
+    const fragment = await loadFragment(`${locale.prefix}${path}`);
+    if (!fragment) return;
+    fragment.classList.add('header-content');
+    await decorateHeader(fragment);
+    el.append(fragment);
+  } catch {
+    // Header fragment may not exist in all environments
+  }
 }

@@ -1,9 +1,8 @@
-@import url('https://use.typekit.net/qvo7ray.css');
-
 /*
  * Scholastic Design System
  * Migrated from https://www.scholastic.com/home
  * Font: museo-sans via Adobe Fonts (Typekit kit: qvo7ray)
+ * Note: Typekit loaded dynamically in scripts to avoid blocking CSS on unauthorized domains
  */
 
 /* fallback font */

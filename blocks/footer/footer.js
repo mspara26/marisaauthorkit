@@ -153,7 +153,7 @@ function buildFooter(data) {
 }
 
 export default async function init(el) {
-  getConfig();
+  try { getConfig(); } catch { /* config may not be available */ }
   const data = parseFooterContent(el);
   if (!data) return;
   const footer = buildFooter(data);
