@@ -8,7 +8,7 @@ try {
   if (config?.locale) locale = config.locale;
 } catch { /* getConfig may not be ready */ }
 
-const HEADER_PATH = '/fragments/nav/header';
+const HEADER_PATH = '/fragments/nav/header.html';
 const HEADER_ACTIONS = [
   '/tools/widgets/scheme',
   '/tools/widgets/language',
