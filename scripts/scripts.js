@@ -33,8 +33,16 @@ const decorateArea = ({ area = document }) => {
   eagerLoad(area, 'img');
 };
 
+function loadTypekitFonts() {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'https://use.typekit.net/qvo7ray.css';
+  document.head.appendChild(link);
+}
+
 export async function loadPage() {
   setConfig({ hostnames, locales, linkBlocks, components, decorateArea });
+  loadTypekitFonts();
   await loadArea();
 }
 await loadPage();

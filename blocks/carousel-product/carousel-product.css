@@ -1,0 +1,314 @@
+/* Carousel Product Block
+ * Two-column layout: header left, product carousel right
+ * Purple watercolor background behind slides
+ */
+
+/* Container override */
+.carousel-product-container .carousel-product-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.carousel-product {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header section (left side on desktop) */
+.carousel-product .carousel-product-header {
+  padding: 0 24px 24px;
+  text-align: left;
+}
+
+.carousel-product .carousel-product-rubric {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-scholastic-red);
+  margin-bottom: 12px;
+}
+
+.carousel-product .carousel-product-header h2 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  letter-spacing: var(--heading-letter-spacing);
+  color: var(--color-scholastic-dark);
+  margin: 0 0 16px;
+}
+
+.carousel-product .carousel-product-description {
+  font-size: var(--body-font-size-l);
+  font-weight: var(--body-font-weight);
+  color: var(--color-scholastic-dark);
+  margin: 0 0 24px;
+  line-height: 1.4;
+}
+
+.carousel-product .carousel-product-cta a {
+  display: inline-block;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  letter-spacing: var(--button-letter-spacing);
+  text-transform: var(--button-text-transform);
+  color: var(--color-scholastic-white);
+  background-color: var(--color-scholastic-red);
+  border-radius: 20px;
+  padding: 12.5px 30px;
+  text-decoration: none;
+  line-height: 1;
+  transition: var(--button-transition);
+}
+
+.carousel-product .carousel-product-cta a:hover {
+  background-color: var(--color-scholastic-red-dark);
+  color: var(--color-scholastic-white);
+}
+
+/* Slides container - purple watercolor background (default) */
+.carousel-product .carousel-product-slides-container {
+  position: relative;
+  background-image: url("https://www.scholastic.com/content/dam/corp-home/asset.jpg/backgroundImages/violet-smoke.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  padding: 40px 0;
+}
+
+/* Parents carousel variant - orange/peach background */
+.carousel-product:has(#book-sets-under-30) .carousel-product-slides-container {
+  background-image: url("https://www.scholastic.com/content/dam/corp-home/asset.jpg/backgroundImages/peach-cloud.jpg");
+}
+
+/* Slides list */
+.carousel-product .carousel-product-slides,
+.carousel-product .carousel-product-slide-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Horizontal scroll container for slides */
+.carousel-product .carousel-product-slides {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0 24px 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel-product .carousel-product-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual slide - product card */
+.carousel-product .carousel-product-slide {
+  flex: 0 0 auto;
+  width: 180px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: auto;
+  position: relative;
+}
+
+/* Product image circle - with padding so images don't fill */
+.carousel-product .carousel-product-slide .carousel-product-slide-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-scholastic-white);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.carousel-product .carousel-product-slide .carousel-product-slide-image picture {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-product .carousel-product-slide .carousel-product-slide-image picture > img,
+.carousel-product .carousel-product-slide .carousel-product-slide-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Product title */
+.carousel-product .carousel-product-slide .carousel-product-slide-content {
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  color: var(--color-scholastic-dark);
+  background-color: transparent;
+  position: static;
+  width: 100%;
+}
+
+.carousel-product .carousel-product-slide .carousel-product-slide-content h3 {
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-scholastic-dark);
+  margin: 0;
+}
+
+.carousel-product .carousel-product-slide .carousel-product-slide-content h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.carousel-product .carousel-product-slide .carousel-product-slide-content h3 a:hover {
+  color: var(--color-scholastic-red);
+}
+
+/* Slide indicators - hidden for product carousel */
+.carousel-product .carousel-product-slide-indicators {
+  display: none;
+}
+
+/* Navigation buttons - bottom right */
+.carousel-product .carousel-product-navigation-buttons {
+  position: absolute;
+  inset: auto 24px 16px auto;
+  transform: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+  pointer-events: none;
+  justify-content: flex-end;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-product .carousel-product-navigation-buttons button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border-radius: 50%;
+  padding: 0;
+  background-color: rgb(51 51 51 / 60%);
+  border: none;
+  transition: background-color 0.2s ease;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.carousel-product .carousel-product-navigation-buttons button:hover,
+.carousel-product .carousel-product-navigation-buttons button:focus-visible {
+  background-color: rgb(51 51 51 / 90%);
+}
+
+/* Arrow icons */
+.carousel-product .carousel-product-navigation-buttons button::after {
+  display: block;
+  content: '';
+  border: 2px solid var(--color-scholastic-white);
+  border-bottom: 0;
+  border-left: 0;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-product .carousel-product-navigation-buttons button.slide-next::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: calc(50% - 2px);
+}
+
+/* Alignment helpers */
+.carousel-product .carousel-product-slide:has(.carousel-product-slide-content[data-align='center']) {
+  align-items: center;
+}
+
+.carousel-product .carousel-product-slide:has(.carousel-product-slide-content[data-align='right']) {
+  align-items: flex-end;
+}
+
+/* Responsive: tablet */
+@media (width >= 600px) {
+  .carousel-product .carousel-product-slides {
+    gap: 32px;
+    padding: 0 32px 16px;
+  }
+
+  .carousel-product .carousel-product-slide {
+    width: 200px;
+  }
+
+  .carousel-product .carousel-product-slide .carousel-product-slide-image {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+  }
+}
+
+/* Responsive: desktop - two-column layout */
+@media (width >= 900px) {
+  .carousel-product {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 48px 0 80px;
+    gap: 0;
+  }
+
+  .carousel-product .carousel-product-header {
+    flex: 0 0 280px;
+    padding: 40px 24px 40px 8.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carousel-product .carousel-product-slides-container {
+    flex: 1;
+    min-width: 0;
+    padding: 40px 0 60px;
+  }
+
+  .carousel-product .carousel-product-slides {
+    gap: 40px;
+    padding: 0 40px 24px;
+  }
+
+  .carousel-product .carousel-product-slide {
+    width: 220px;
+  }
+
+  .carousel-product .carousel-product-slide .carousel-product-slide-image {
+    width: 220px;
+    height: 220px;
+    padding: 24px;
+  }
+
+  .carousel-product .carousel-product-slide .carousel-product-slide-content h3 {
+    font-size: var(--body-font-size-m);
+  }
+
+  .carousel-product .carousel-product-navigation-buttons {
+    bottom: 20px;
+    right: 32px;
+  }
+}

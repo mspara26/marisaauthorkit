@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www.scholastic.com/home",
+  "path": "home",
+  "timestamp": "2026-03-24T21:14:32.683Z",
+  "title": "Scholastic | Books for Kids | Learning Resources",
+  "template": "home-page",
+  "blocks": [
+    "hero-scholastic",
+    "cards-promo",
+    "cards-promo",
+    "hero-promo",
+    "hero-promo",
+    "carousel-product",
+    "carousel-product",
+    "carousel-product",
+    "footer"
+  ]
+}

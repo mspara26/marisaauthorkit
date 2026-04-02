@@ -1,0 +1,141 @@
+{
+  "templates": [
+    {
+      "name": "home-page",
+      "urls": [
+        "https://www.scholastic.com/home"
+      ],
+      "description": "Scholastic homepage with promotional content, featured products, and navigation to key sections",
+      "blocks": [
+        {
+          "name": "hero-scholastic",
+          "instances": [
+            ".compoundheader .cmp-compoundheader"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            ".cmp-compoundheader .grid-layout",
+            ".cmp-threeCardMerchandising__cards"
+          ]
+        },
+        {
+          "name": "hero-promo",
+          "instances": [
+            ".responsivegrid .aem-Grid.layout-02-top.layout-02-bottom"
+          ]
+        },
+        {
+          "name": "carousel-product",
+          "instances": [
+            ".merchandisingcarousel:not(.bookcarousel) .cmp-merchandisingCarousel",
+            ".bookcarousel .cmp-merchandisingCarousel",
+            ".lobCarousel"
+          ]
+        },
+        {
+          "name": "footer",
+          "instances": [
+            ".footer"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Section",
+          "selector": ".compoundheader",
+          "style": null,
+          "blocks": [
+            "hero-scholastic",
+            "cards-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Teacher Promotion Banner",
+          "selector": ".responsivegrid .aem-Grid.layout-02-top.layout-02-bottom:first-of-type",
+          "style": "light",
+          "blocks": [
+            "hero-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Scholastic TV Banner",
+          "selector": ".responsivegrid .aem-Grid.layout-02-top.layout-02-bottom:last-of-type",
+          "style": null,
+          "blocks": [
+            "hero-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Classroom Libraries Carousel",
+          "selector": ".merchandisingcarousel:not(.bookcarousel)",
+          "style": null,
+          "blocks": [
+            "carousel-product"
+          ],
+          "defaultContent": [
+            ".cmp-merchandisingCarousel__rubric",
+            ".cmp-merchandisingCarousel__cardTitle",
+            ".cmp-merchandisingCarousel__description",
+            ".cmp-merchandisingCarousel__button"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Book Sets Carousel",
+          "selector": ".bookcarousel.merchandisingcarousel",
+          "style": null,
+          "blocks": [
+            "carousel-product"
+          ],
+          "defaultContent": [
+            ".cmp-merchandisingCarousel__rubric",
+            ".cmp-merchandisingCarousel__cardTitle",
+            ".cmp-merchandisingCarousel__description",
+            ".cmp-merchandisingCarousel__button"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Don't Miss Out Cards",
+          "selector": ".threeCardMerchandising",
+          "style": "dark",
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": [
+            ".cmp-threeCardMerchandising__headerTitle"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "LOB Carousel",
+          "selector": ".lobCarousel",
+          "style": null,
+          "blocks": [
+            "carousel-product"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Footer",
+          "selector": ".footer",
+          "style": null,
+          "blocks": [
+            "footer"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

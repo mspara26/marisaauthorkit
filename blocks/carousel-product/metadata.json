@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-product",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-03-24T19:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.scholastic.com/home",
+    "originPage": "Scholastic homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-carousel",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title per slide",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product showcase carousels",
+      "category browsing carousels",
+      "book collection carousels"
+    ],
+    "notSuitableFor": [
+      "text-heavy content carousels",
+      "full-page hero carousels",
+      "single slide layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-24T19:48:00.000Z"
+  }
+}

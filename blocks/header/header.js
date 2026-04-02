@@ -2,7 +2,11 @@ import { getConfig, getMetadata } from '../../scripts/ak.js';
 import { loadFragment } from '../fragment/fragment.js';
 import { setColorScheme } from '../section-metadata/section-metadata.js';
 
-const { locale } = getConfig();
+let locale = { prefix: '' };
+try {
+  const config = getConfig();
+  if (config?.locale) locale = config.locale;
+} catch { /* getConfig may not be ready */ }
 
 const HEADER_PATH = '/fragments/nav/header';
 const HEADER_ACTIONS = [
@@ -101,9 +105,13 @@ async function decorateAction(header, pattern) {
     btn.append(textSpan);
   }
   const wrapper = document.createElement('div');
-  wrapper.className = `action-wrapper ${icon.classList[1].replace('icon-', '')}`;
+  const iconClass = icon?.classList[1]?.replace('icon-', '') || '';
+  wrapper.className = `action-wrapper ${iconClass}`.trim();
   wrapper.append(btn);
-  link.parentElement.parentElement.replaceChild(wrapper, link.parentElement);
+  const linkParent = link.parentElement;
+  if (linkParent?.parentElement) {
+    linkParent.parentElement.replaceChild(wrapper, linkParent);
+  }
 
   if (pattern === '/tools/widgets/language') decorateLanguage(btn);
   if (pattern === '/tools/widgets/scheme') decorateScheme(btn);
@@ -131,16 +139,20 @@ function decorateNavItem(li) {
   if (link) link.classList.add('main-nav-link');
   const menu = decorateMegaMenu(li) || decorateMenu(li);
   if (!(menu || link)) return;
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    toggleMenu(li);
-  });
+  if (link && menu) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMenu(li);
+    });
+  }
 }
 
 function decorateBrandSection(section) {
   section.classList.add('brand-section');
   const brandLink = section.querySelector('a');
+  if (!brandLink) return;
   const [, text] = brandLink.childNodes;
+  if (!text) return;
   const span = document.createElement('span');
   span.className = 'brand-text';
   span.append(text);
@@ -184,14 +196,15 @@ async function decorateHeader(fragment) {
  * @param {Element} el The header element
  */
 export default async function init(el) {
-  const headerMeta = getMetadata('header');
-  const path = headerMeta || HEADER_PATH;
   try {
+    const headerMeta = getMetadata('header');
+    const path = headerMeta || HEADER_PATH;
     const fragment = await loadFragment(`${locale.prefix}${path}`);
+    if (!fragment) return;
     fragment.classList.add('header-content');
     await decorateHeader(fragment);
     el.append(fragment);
-  } catch (e) {
-    throw Error(e);
+  } catch {
+    // Header fragment may not exist in all environments
   }
 }
