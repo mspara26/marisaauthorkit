@@ -1,0 +1,292 @@
+[
+  {
+    "id": "banner-clubs",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "image",
+        "label": "Flyer Image",
+        "description": "Promotional flyer image"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "description": "Logo image, description text, and CTA link"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "description": "Image, heading, description, and CTA link"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style Options",
+        "options": [
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Quiet",
+            "value": "quiet"
+          },
+          {
+            "name": "Hash Aware",
+            "value": "hash-aware"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards-promo",
+    "fields": []
+  },
+  {
+    "id": "cards-promo-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "image",
+        "label": "Image",
+        "description": "Card image"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "label": "Body",
+        "description": "Rubric, heading, description, and CTA"
+      }
+    ]
+  },
+  {
+    "id": "carousel-product",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "header",
+        "label": "Header",
+        "description": "Optional header with rubric, heading, description, and CTA"
+      }
+    ]
+  },
+  {
+    "id": "carousel-product-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "image",
+        "label": "Product Image",
+        "description": "Product image displayed in circular container"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Product Info",
+        "description": "Product title with link"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "column1",
+        "label": "Column 1",
+        "description": "Content for the first column"
+      },
+      {
+        "component": "richtext",
+        "name": "column2",
+        "label": "Column 2",
+        "description": "Content for the second column"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style Options",
+        "options": [
+          {
+            "name": "Image Cover",
+            "value": "image-cover"
+          },
+          {
+            "name": "Z Pattern",
+            "value": "z-pattern"
+          },
+          {
+            "name": "Align Top",
+            "value": "align-top"
+          },
+          {
+            "name": "Gap XS",
+            "value": "gap-xs"
+          },
+          {
+            "name": "Gap S",
+            "value": "gap-s"
+          },
+          {
+            "name": "Gap M",
+            "value": "gap-m"
+          },
+          {
+            "name": "Gap L",
+            "value": "gap-l"
+          },
+          {
+            "name": "Gap XL",
+            "value": "gap-xl"
+          },
+          {
+            "name": "Gap XXL",
+            "value": "gap-xxl"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hero-promo",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "image",
+        "label": "Image",
+        "description": "Promotional foreground image"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "description": "Heading and CTA button"
+      }
+    ]
+  },
+  {
+    "id": "hero-scholastic",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "image",
+        "label": "Image",
+        "description": "Product or book collage image"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Content",
+        "description": "Heading with optional link and CTA"
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "background",
+        "label": "Background",
+        "description": "Background image or video"
+      },
+      {
+        "component": "richtext",
+        "name": "foreground",
+        "label": "Foreground Content",
+        "description": "Heading, text, and call-to-action links"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style Options",
+        "options": [
+          {
+            "name": "Small",
+            "value": "small"
+          },
+          {
+            "name": "Large",
+            "value": "large"
+          },
+          {
+            "name": "Full",
+            "value": "full"
+          },
+          {
+            "name": "Light",
+            "value": "light"
+          },
+          {
+            "name": "Dark",
+            "value": "dark"
+          },
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Stack",
+            "value": "stack"
+          },
+          {
+            "name": "Quiet Background",
+            "value": "quiet-background"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "style",
+        "label": "Style",
+        "description": "CSS class applied to the section (e.g., dark, highlight)"
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "style",
+        "label": "Style",
+        "description": "Section style class (e.g., dark, highlight)"
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Table Content",
+        "description": "HTML table content"
+      }
+    ]
+  },
+  {
+    "id": "youtube",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "link",
+        "label": "YouTube URL",
+        "description": "Paste a YouTube video URL"
+      }
+    ]
+  }
+]

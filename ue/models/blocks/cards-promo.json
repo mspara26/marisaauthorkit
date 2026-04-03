@@ -1,0 +1,57 @@
+{
+  "definitions": [
+    {
+      "id": "cards-promo",
+      "name": "Cards Promo",
+      "da": {
+        "name": "cards-promo"
+      },
+      "fields": [],
+      "rows": 1,
+      "columns": 2,
+      "filter": "cards-promo-item",
+      "unsafeHTML": ""
+    },
+    {
+      "id": "cards-promo-item",
+      "name": "Cards Promo Item",
+      "da": {
+        "name": "cards-promo"
+      },
+      "fields": [
+        { "name": "image", "selector": "div:nth-child(1)" },
+        { "name": "body", "selector": "div:nth-child(2)" }
+      ],
+      "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p>\n<p>Category</p><h3>Card Heading</h3><p>Description text.</p><p><a href=\"#\">Shop Now</a></p>"
+    }
+  ],
+  "models": [
+    {
+      "id": "cards-promo",
+      "fields": []
+    },
+    {
+      "id": "cards-promo-item",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "image",
+          "label": "Image",
+          "description": "Card image"
+        },
+        {
+          "component": "richtext",
+          "name": "body",
+          "label": "Body",
+          "description": "Rubric, heading, description, and CTA"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "cards-promo-item",
+      "components": ["cards-promo-item"]
+    }
+  ]
+}

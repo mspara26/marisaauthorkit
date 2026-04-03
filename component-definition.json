@@ -1,0 +1,215 @@
+{
+  "groups": [
+    {
+      "title": "Blocks",
+      "id": "blocks",
+      "components": [
+        {
+          "id": "banner-clubs",
+          "name": "Banner Clubs",
+          "da": {
+            "name": "banner-clubs"
+          },
+          "fields": [
+            {
+              "name": "image",
+              "selector": "div:nth-child(1)>div:nth-child(1)"
+            },
+            {
+              "name": "content",
+              "selector": "div:nth-child(1)>div:nth-child(2)"
+            }
+          ],
+          "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p>\n<p><img src=\"/ue/img/placeholder.png\" alt=\"Logo\"></p><p>Description text here.</p><p><a href=\"#\">Call to Action</a></p>"
+        },
+        {
+          "id": "card",
+          "name": "Card",
+          "da": {
+            "name": "card"
+          },
+          "fields": [
+            {
+              "name": "content",
+              "selector": "div:nth-child(1)"
+            }
+          ],
+          "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p><h3>Card Title</h3><p>Card description.</p><p><a href=\"#\">Read More</a></p>"
+        },
+        {
+          "id": "cards-promo",
+          "name": "Cards Promo",
+          "da": {
+            "name": "cards-promo"
+          },
+          "fields": [],
+          "rows": 1,
+          "columns": 2,
+          "filter": "cards-promo-item",
+          "unsafeHTML": ""
+        },
+        {
+          "id": "cards-promo-item",
+          "name": "Cards Promo Item",
+          "da": {
+            "name": "cards-promo"
+          },
+          "fields": [
+            {
+              "name": "image",
+              "selector": "div:nth-child(1)"
+            },
+            {
+              "name": "body",
+              "selector": "div:nth-child(2)"
+            }
+          ],
+          "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p>\n<p>Category</p><h3>Card Heading</h3><p>Description text.</p><p><a href=\"#\">Shop Now</a></p>"
+        },
+        {
+          "id": "carousel-product",
+          "name": "Carousel Product",
+          "da": {
+            "name": "carousel-product"
+          },
+          "fields": [],
+          "filter": "carousel-product-item",
+          "unsafeHTML": ""
+        },
+        {
+          "id": "carousel-product-item",
+          "name": "Carousel Product Slide",
+          "da": {
+            "name": "carousel-product"
+          },
+          "fields": [
+            {
+              "name": "image",
+              "selector": "div:nth-child(1)"
+            },
+            {
+              "name": "content",
+              "selector": "div:nth-child(2)"
+            }
+          ],
+          "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p>\n<h3><a href=\"#\">Product Title</a></h3>"
+        },
+        {
+          "id": "columns",
+          "name": "Columns",
+          "da": {
+            "name": "columns"
+          },
+          "fields": [
+            {
+              "name": "column1",
+              "selector": "div:nth-child(1)>div:nth-child(1)"
+            },
+            {
+              "name": "column2",
+              "selector": "div:nth-child(1)>div:nth-child(2)"
+            }
+          ],
+          "unsafeHTML": "<p>Column 1 content</p>\n<p>Column 2 content</p>"
+        },
+        {
+          "id": "hero-promo",
+          "name": "Hero Promo",
+          "da": {
+            "name": "hero-promo"
+          },
+          "fields": [
+            {
+              "name": "image",
+              "selector": "div:nth-child(1)"
+            },
+            {
+              "name": "content",
+              "selector": "div:nth-child(2)"
+            }
+          ],
+          "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p>\n<h2>Promotional Heading</h2><p><a href=\"#\">Learn More</a></p>"
+        },
+        {
+          "id": "hero-scholastic",
+          "name": "Hero Scholastic",
+          "da": {
+            "name": "hero-scholastic"
+          },
+          "fields": [
+            {
+              "name": "image",
+              "selector": "div:nth-child(1)"
+            },
+            {
+              "name": "content",
+              "selector": "div:nth-child(2)"
+            }
+          ],
+          "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p>\n<h2><a href=\"#\">New Stories. Big Adventures.</a></h2><p><a href=\"#\">Shop Now</a></p>"
+        },
+        {
+          "id": "hero",
+          "name": "Hero",
+          "da": {
+            "name": "hero"
+          },
+          "fields": [
+            {
+              "name": "background",
+              "selector": "div:nth-child(1)"
+            },
+            {
+              "name": "foreground",
+              "selector": "div:nth-child(2)"
+            }
+          ],
+          "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p>\n<h2>Hero Heading</h2><p>Hero description text.</p><p><a href=\"#\">Call to Action</a></p>"
+        },
+        {
+          "id": "section-metadata",
+          "name": "Section Metadata",
+          "da": {
+            "name": "section-metadata",
+            "type": "key-value-block"
+          },
+          "fields": [
+            {
+              "name": "style",
+              "selector": "div:nth-child(1)"
+            }
+          ],
+          "unsafeHTML": ""
+        },
+        {
+          "id": "table",
+          "name": "Table",
+          "da": {
+            "name": "table"
+          },
+          "fields": [
+            {
+              "name": "content",
+              "selector": "div:nth-child(1)"
+            }
+          ],
+          "unsafeHTML": "<table><tr><th>Header 1</th><th>Header 2</th></tr><tr><td>Cell 1</td><td>Cell 2</td></tr></table>"
+        },
+        {
+          "id": "youtube",
+          "name": "YouTube Video",
+          "da": {
+            "name": "youtube"
+          },
+          "fields": [
+            {
+              "name": "link",
+              "selector": "div:nth-child(1)"
+            }
+          ],
+          "unsafeHTML": "<p><a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\">https://www.youtube.com/watch?v=dQw4w9WgXcQ</a></p>"
+        }
+      ]
+    }
+  ]
+}

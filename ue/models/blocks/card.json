@@ -1,0 +1,39 @@
+{
+  "definitions": [
+    {
+      "id": "card",
+      "name": "Card",
+      "da": {
+        "name": "card"
+      },
+      "fields": [
+        { "name": "content", "selector": "div:nth-child(1)" }
+      ],
+      "unsafeHTML": "<p><picture><img src=\"/ue/img/placeholder.png\"></picture></p><h3>Card Title</h3><p>Card description.</p><p><a href=\"#\">Read More</a></p>"
+    }
+  ],
+  "models": [
+    {
+      "id": "card",
+      "fields": [
+        {
+          "component": "richtext",
+          "name": "content",
+          "label": "Content",
+          "description": "Image, heading, description, and CTA link"
+        },
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style Options",
+          "options": [
+            { "name": "Center", "value": "center" },
+            { "name": "Quiet", "value": "quiet" },
+            { "name": "Hash Aware", "value": "hash-aware" }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

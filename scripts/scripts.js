@@ -47,6 +47,11 @@ export async function loadPage() {
 }
 await loadPage();
 
+// Load Universal Editor support when editing in UE
+if (/\.(stage-ue|ue)\.da\.live$/.test(window.location.hostname)) {
+  await import('../ue/scripts/ue.js').then(({ default: ue }) => ue());
+}
+
 (function da() {
   const { searchParams } = new URL(window.location.href);
   const hasPreview = searchParams.has('dapreview');

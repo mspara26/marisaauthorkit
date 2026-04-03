@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cards-promo-item",
+    "components": [
+      "cards-promo-item"
+    ]
+  },
+  {
+    "id": "carousel-product-item",
+    "components": [
+      "carousel-product-item"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "hero",
+      "hero-scholastic",
+      "hero-promo",
+      "banner-clubs",
+      "card",
+      "cards-promo",
+      "carousel-product",
+      "columns",
+      "youtube",
+      "table"
+    ]
+  }
+]

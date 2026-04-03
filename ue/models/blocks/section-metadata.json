@@ -1,0 +1,30 @@
+{
+  "definitions": [
+    {
+      "id": "section-metadata",
+      "name": "Section Metadata",
+      "da": {
+        "name": "section-metadata",
+        "type": "key-value-block"
+      },
+      "fields": [
+        { "name": "style", "selector": "div:nth-child(1)" }
+      ],
+      "unsafeHTML": ""
+    }
+  ],
+  "models": [
+    {
+      "id": "section-metadata",
+      "fields": [
+        {
+          "component": "text",
+          "name": "style",
+          "label": "Style",
+          "description": "CSS class applied to the section (e.g., dark, highlight)"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
